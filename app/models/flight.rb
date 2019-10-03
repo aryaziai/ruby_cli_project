@@ -1,8 +1,8 @@
 class Flight < ActiveRecord::Base
 
- # belongs_to : ?
+
 has_many :tickets
-has_many :passengers, through: :tickets
+has_many :customers, through: :tickets
 
     def passengers 
         # active record provides us with all method
@@ -18,22 +18,6 @@ has_many :passengers, through: :tickets
     end
 
 
-#     # destination = 
-#     if from_state.casecmp == California
-#         puts "let's go"
-#     else
-#         puts "Sorry no flights"
-#     end
-# end
-
-   def destination(from_airport)
-     from_airport = sfo
-        if from_state.casecmp == California
-            puts "let's go"
-        else
-            puts "Sorry no flights"
-        end
-    end
     
 
 
