@@ -1,4 +1,4 @@
-require_relative '/Users/aryaziai/Development/Final_Project/config/environment.rb'
+require_relative '../config/environment.rb'
 require_relative '../app/models/cli.rb'
 
 arya = TakeFlight.new

@@ -22,7 +22,7 @@ end
   Flight.create(
     flight_number: Faker::IDNumber.spanish_citizen_number, 
     airline: "#{Faker::Company.name} Airlines", 
-    destination: Faker::Team.state.uniq, 
+    destination: Faker::Team.state, 
     domestic_int: "domestic"
   )
   end
@@ -41,10 +41,10 @@ end
   5.times do 
   Ticket.create(
     customer_id: Faker::Number.number(digits: 3),
-    flight_number: Faker::IDNumber.spanish_citizen_number,
-    seating: "First Class"
-    price: "$#{Faker::Number.number(digits: 3).to_s}"
-    time: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now, format: :long)
+    flight_id: Faker::IDNumber.spanish_citizen_number,
+    seating: "First Class",
+    price: Faker::Number.number(digits: 3),
+    time: Time.now
   )
 end
 
